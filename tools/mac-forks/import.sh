@@ -2,7 +2,7 @@
 # Reconstitutes the real, gitignored, resource-fork-bearing files from
 # their tracked .hqx / .r sidecars. Run automatically by the
 # post-checkout / post-merge hooks; safe to run by hand too (e.g.
-# after pulling, or `tools/mac-forks/import`).
+# after pulling, or `tools/mac-forks/import.sh`).
 #
 # Because the real files are gitignored rather than tracked, this
 # writes them directly with no risk of racing git's own checkout

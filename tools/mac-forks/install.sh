@@ -31,6 +31,6 @@ done
 echo "mac-forks hooks installed for $root"
 
 echo "materializing real files from their .hqx/.r sidecars..."
-"$root/tools/mac-forks/import"
+"$root/tools/mac-forks/import.sh"
 
 echo "done."
