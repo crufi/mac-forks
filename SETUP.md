@@ -3,8 +3,8 @@
 Quick checklist for starting a fresh git repo around a classic Mac project
 (THINK C / Symantec C++ / CodeWarrior / MPW era), using
 [mac-forks](https://github.com/crufi/mac-forks) for resource forks and its
-`maceol` filter for CR-only text. See the [README](README.md) for the *why*;
-this is just the *how*.
+`mactext` filter for Mac Roman, CR-only text. See the [README](README.md) for
+the *why*; this is just the *how*.
 
 macOS + Xcode Command Line Tools only (`xcode-select --install`) — that's
 where `binhex`/`DeRez`/`Rez`/`SetFile` come from.
@@ -24,7 +24,7 @@ sh tools/mac-forks/install.sh
 ```
 
 `install.sh` checks for the required tools, symlinks the `pre-commit` /
-`post-checkout` / `post-merge` hooks, and configures the `maceol` filter.
+`post-checkout` / `post-merge` hooks, and configures the `mactext` filter.
 **Every clone needs to run this once** — hooks and filter config live in
 `.git/`, which `git clone` never populates.
 
@@ -37,19 +37,19 @@ lives in your own repo, one pattern per line:
 *.hqx -text
 *.r -text
 
-*.c filter=maceol -text
-*.h filter=maceol -text
-*.cp filter=maceol -text
-*.cpp filter=maceol -text
-*.hpp filter=maceol -text
+*.c filter=mactext -text
+*.h filter=mactext -text
+*.cp filter=mactext -text
+*.cpp filter=mactext -text
+*.hpp filter=mactext -text
 ```
 
-Add more `filter=maceol -text` lines for whatever else your project has —
+Add more `filter=mactext -text` lines for whatever else your project has —
 `.p`/`.pas` (Pascal), `.a`/`.asm`, etc.
 
 ⚠️ **Naming collision to watch for:** mac-forks generates `.r` sidecars for
 resource-only files (`Foo.rsrc` → `Foo.rsrc.r`). If your project *also* has
-genuine hand-written Rez source ending in `.r`, don't add `filter=maceol` to
+genuine hand-written Rez source ending in `.r`, don't add `filter=mactext` to
 those — `-text` alone is enough, and you don't want mac-forks' own
 DeRez-generated sidecars mistaken for hand-written Rez source or vice versa.
 
