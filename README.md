@@ -1,6 +1,6 @@
 # mac-forks
 
-Git tooling for tracking classic Mac OS files that live in their **resource
+Git tools for tracking classic Mac OS files that live in their **resource
 fork** rather than their data fork — project files, ResEdit resource files,
 anything from the Symantec/THINK C / CodeWarrior / MPW era.
 
