@@ -4,7 +4,7 @@ Git tools for tracking classic Mac OS files that mainly live in their **resource
 fork** rather than their data fork — project files, ResEdit resource files,
 anything from the Symantec/THINK C/CodeWarrior/MPW era.
 
-New to this? Jump to [Setting up a new project](#setting-up-a-new-project)
+See [Setting up a new project](#setting-up-a-new-project)
 below for a step-by-step checklist. The rest of this README explains what
 each piece does and why.
 
